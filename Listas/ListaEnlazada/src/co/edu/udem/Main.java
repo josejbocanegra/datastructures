@@ -23,6 +23,7 @@ public class Main {
 			System.out.println("Nodo " + n.getContenido() + " encontrado");
 		else
 			System.out.println("Nodo no encontrado");
+		
 		System.out.println("-------------");
 		
 		
