@@ -92,12 +92,20 @@ public class Lista {
 		ultimo.setSiguiente(n);
 	}
 	
-	//TODO: Implementar los siguientes algoritmos
+	// Insertar un elemento antes de uno del que se tiene la referencia
+	public void insertarAntesDe(int contenido, Nodo n) throws NoExisteException {
+		Nodo anterior = localizarAnterior(contenido);
+		if (anterior == null)
+			throw new NoExisteException(contenido);
+		else
+			anterior.insertarDespues(n);
+	}
+
+	// TODO: Implementar los siguientes algoritmos
 	/*
-		Insertar un elemento antes de un elemento que se encuentra en la lista y del cual recibimos el código como parámetro
-		Invertir la lista - imprimir en órden inverso
+		Invertir la lista (imprimir en órden inverso)
 		Ordenar la lista
 		Mover un elemento al comienzo de la lista
-		Mover un element al final
+		Mover un elemento al final
 	*/
 }
