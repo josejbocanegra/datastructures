@@ -11,13 +11,14 @@ public class Main {
 		System.out.println("--Insertar al comienzo--");
 		lista.insertarAlComienzo(new Nodo(15));
 		lista.insertarAlComienzo(new Nodo(20));
-		lista.insertarAlComienzo(new Nodo(30));
-		lista.insertarAlComienzo(new Nodo(40));
+		//lista.insertarAlComienzo(new Nodo(30));
+		//lista.insertarAlComienzo(new Nodo(40));
 		
 		//Mostrar los elementos de la lista
 		System.out.println("--Mostar los elementos de la lista--");
 		lista.mostrarLista();
 		
+		/*
 		//Buscar un nodo 
 		System.out.println("--Buscar un nodo--");
 		Nodo n =lista.buscarNodo(100);
@@ -63,6 +64,11 @@ public class Main {
 		System.out.println("--Insertar un nodo al antes de uno del cual se tiene la referencia--");
 		lista.insertarAntesDe(245, new Nodo (785));
 		
+		lista.mostrarLista();
+		System.out.println("-------------");
+		*/
+		System.out.println("--Invertir lista--");
+		lista.invertirLista();
 		lista.mostrarLista();
 		System.out.println("-------------");
 	}

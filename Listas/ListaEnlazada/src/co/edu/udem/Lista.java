@@ -100,6 +100,29 @@ public class Lista {
 		else
 			anterior.insertarDespues(n);
 	}
+	
+	public void invertirLista() {
+		
+		Nodo cabeza = primero;
+		int i = longitud()-1;
+		while (i > 0) {
+			Nodo cola = localizarUltimo();
+			Nodo anteriorCabeza = localizarAnterior(cabeza.getContenido());
+			Nodo anteriorCola = localizarAnterior(cola.getContenido());
+			
+			cola.setSiguiente(cabeza);
+			
+			if(anteriorCabeza != null) {
+				anteriorCabeza.setSiguiente(cola);
+			}
+			else {
+				cola.setSiguiente(cabeza);
+				primero = cola;
+			}
+			anteriorCola.setSiguiente(null);
+			i--;
+		}
+	}
 
 	// TODO: Implementar los siguientes algoritmos
 	/*
