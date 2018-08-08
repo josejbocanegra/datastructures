@@ -18,7 +18,6 @@ public class Main {
 		System.out.println("--Mostar los elementos de la lista--");
 		lista.mostrarLista();
 		
-		
 		//Buscar un nodo 
 		System.out.println("--Buscar un nodo--");
 		Nodo n =lista.buscarNodo(100);
