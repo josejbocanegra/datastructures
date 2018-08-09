@@ -1,10 +1,20 @@
-package co.edu.udem;
+package co.edu.udem.listadoble;
 
 public class Nodo {
 	
 	int contenido;
 	Nodo siguiente;
+	Nodo anterior;
 	
+	
+	public Nodo getAnterior() {
+		return anterior;
+	}
+
+	public void setAnterior(Nodo anterior) {
+		this.anterior = anterior;
+	}
+
 	public Nodo (int contenido) {
 		this.contenido=contenido;
 	}
@@ -27,6 +37,8 @@ public class Nodo {
 	
 	public void insertarDespues(Nodo n) {
 		n.siguiente=siguiente;
+		n.anterior=siguiente.anterior;
 		siguiente=n;
+		n.siguiente.anterior=n;
 	}
 }
