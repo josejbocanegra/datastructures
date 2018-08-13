@@ -14,7 +14,7 @@ public class Main {
 		listaDoble.mostrarLista();
 		
 		
-		listaDoble.insertarDespuesDe(20, new Nodo (589));
+		listaDoble.insertarAntesDe(40, new Nodo (589));
 		
 		System.out.println("-Lista después de insertar el nodo 589 después del nodo 20-");
 		listaDoble.mostrarLista();

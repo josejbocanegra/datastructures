@@ -54,11 +54,17 @@ public class ListaDoble {
 
 	// Insertar un elemento después de uno del que se tiene la referencia ->
 	public void insertarDespuesDe(int contenido, Nodo n) throws NoExisteException {
-		Nodo anterior = buscarNodo(contenido);
-		if (anterior == null)
+		Nodo actual = buscarNodo(contenido);
+		if (actual == null)
 			throw new NoExisteException(contenido);
-		else
-			anterior.insertarDespues(n);
+		else {
+			n.setSiguiente(actual.getSiguiente());
+			n.setAnterior(actual);
+			if(actual.getSiguiente() != null) {
+				actual.getSiguiente().setAnterior(n);
+			}
+			actual.setSiguiente(n);
+		}
 	}
 
 	// Insertar un elemento como el primero de la secuencia
@@ -77,11 +83,18 @@ public class ListaDoble {
 
 	// Insertar un elemento antes de uno del que se tiene la referencia
 	public void insertarAntesDe(int contenido, Nodo n) throws NoExisteException {
-		Nodo anterior = localizarAnterior(contenido);
-		if (anterior == null)
+		Nodo actual = buscarNodo(contenido);
+		if (actual == null)
 			throw new NoExisteException(contenido);
-		else
-			anterior.insertarDespues(n);
+		else {
+			n.setSiguiente(actual);
+			n.setAnterior(actual.getAnterior());
+			if(actual.getAnterior() != null) {
+				actual.getAnterior().setSiguiente(n);
+			}
+			actual.setAnterior(n);
+			primero=n;
+		}
 	}
 	
 	//Mostrar lista
@@ -97,9 +110,11 @@ public class ListaDoble {
 
 	// TODO: Implementar los siguientes algoritmos
 	/*
-	 * Insertar un elemento al final Insertar un elemento antes del un nodo que se
-	 * encuentra en la lista y del cual recibimos el código como parámetro Mostrar
-	 * la lista en orden inverso Ordenar la lista Mover un elemento al comienzo
-	 * Mover un elemento al final Eliminar un elemento
+	 * Insertar un elemento al final
+	 * Mostrar la lista en orden inverso 
+	 * Ordenar la lista 
+	 * Mover un elemento al comienzo
+	 * Mover un elemento al final 
+	 * Eliminar un elemento
 	 */
 }

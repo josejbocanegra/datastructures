@@ -34,11 +34,4 @@ public class Nodo {
 	public void setSiguiente(Nodo siguiente) {
 		this.siguiente = siguiente;
 	}
-	
-	public void insertarDespues(Nodo n) {
-		n.siguiente=siguiente;
-		n.anterior=siguiente.anterior;
-		siguiente=n;
-		n.siguiente.anterior=n;
-	}
 }
