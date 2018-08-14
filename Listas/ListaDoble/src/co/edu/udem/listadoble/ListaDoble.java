@@ -96,8 +96,10 @@ public class ListaDoble {
 			if(actual.getAnterior() != null) {
 				actual.getAnterior().setSiguiente(n);
 			}
+			else {
+				primero=n;
+			} 
 			actual.setAnterior(n);
-			primero=n;
 		}
 	}
 	
