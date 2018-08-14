@@ -54,7 +54,9 @@ public class ListaDoble {
 
 	// Insertar un elemento después de uno del que se tiene la referencia ->
 	public void insertarDespuesDe(int contenido, Nodo n) throws NoExisteException {
+		
 		Nodo actual = buscarNodo(contenido);
+		
 		if (actual == null)
 			throw new NoExisteException(contenido);
 		else {
@@ -83,7 +85,9 @@ public class ListaDoble {
 
 	// Insertar un elemento antes de uno del que se tiene la referencia
 	public void insertarAntesDe(int contenido, Nodo n) throws NoExisteException {
+		
 		Nodo actual = buscarNodo(contenido);
+		
 		if (actual == null)
 			throw new NoExisteException(contenido);
 		else {

@@ -6,7 +6,6 @@ public class Nodo {
 	Nodo siguiente;
 	Nodo anterior;
 	
-	
 	public Nodo getAnterior() {
 		return anterior;
 	}
