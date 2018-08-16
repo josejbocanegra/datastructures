@@ -3,6 +3,46 @@ package co.edu.udem.listadoble;
 public class ListaDoble {
 
 	Nodo primero;
+	
+	public Nodo desconectar(int contenido) {
+
+		Nodo actual = buscarNodo(contenido);
+
+		if (actual != null) {
+			if (actual.getAnterior() == null) {
+				primero = actual.getSiguiente();
+				primero.setAnterior(null);
+			} else if (actual.getSiguiente() == null) {
+				actual.getAnterior().setSiguiente(null);
+			} else {
+				actual.getAnterior().setSiguiente(actual.getSiguiente());
+				actual.getSiguiente().setAnterior(actual.getAnterior());
+			}
+		}
+		return actual;
+	}
+	
+	public void ordenar() throws NoExisteException {
+		
+		int longitud = longitud() - 1;
+		
+		while (longitud > 0) {
+			Nodo i = primero;
+			Nodo j = primero.getSiguiente();
+			while (j != null) {
+				if(i.getContenido() > j.getContenido()) {
+					Nodo desconectado = desconectar(j.getContenido());
+					insertarAntesDe(i.getContenido(), desconectado);
+					j=i.getSiguiente();
+				} 
+				else {
+					i=j;
+				}
+				j=i.getSiguiente();
+			}
+			longitud--;
+		}
+	}
 
 	// Buscar un elemento ->
 	public Nodo buscarNodo(int contenido) {

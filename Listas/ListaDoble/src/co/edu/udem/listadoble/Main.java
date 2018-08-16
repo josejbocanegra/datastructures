@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) throws NoExisteException {
 		// TODO Auto-generated method stub
 		ListaDoble listaDoble = new ListaDoble();
-		listaDoble.insertarAlComienzo(new Nodo (10));
+		listaDoble.insertarAlComienzo(new Nodo (80));
 		listaDoble.insertarAlComienzo(new Nodo (20));
 		listaDoble.insertarAlComienzo(new Nodo (30));
 		listaDoble.insertarAlComienzo(new Nodo (40));
@@ -13,8 +13,8 @@ public class Main {
 		System.out.println("-Lista incial-");
 		listaDoble.mostrarLista();
 		
-		
-		listaDoble.insertarDespuesDe(10, new Nodo (589));
+		listaDoble.ordenar();
+		//listaDoble.desconectar(20);
 		
 		System.out.println("------");
 		listaDoble.mostrarLista();
