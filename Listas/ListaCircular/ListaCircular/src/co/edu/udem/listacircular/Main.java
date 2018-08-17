@@ -9,7 +9,9 @@ public class Main {
 		listaCircular.insertar(new Nodo(750));
 		
 		listaCircular.mostrarLista();
+		System.out.println(listaCircular.buscarAnterior(150).getContenido());
+		//System.out.println(listaCircular.buscar(750) == null ? "no existe" : "si existe" );
 		
-		System.out.println("----> "+listaCircular.buscar(150) == null ? "no": "si");
+		//System.out.println(listaCircular.longitud());
 	}
 }
