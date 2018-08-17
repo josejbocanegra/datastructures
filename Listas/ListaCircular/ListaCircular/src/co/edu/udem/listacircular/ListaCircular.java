@@ -21,6 +21,7 @@ public class ListaCircular {
 	}
 	
 	public void insertar(Nodo n) {
+		
 		if (cabeza != null) {
 			n.setSiguiente(cabeza.getSiguiente());
 			cabeza.setSiguiente(n);
