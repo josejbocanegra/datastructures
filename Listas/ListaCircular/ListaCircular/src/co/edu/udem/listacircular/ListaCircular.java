@@ -1,6 +1,5 @@
 package co.edu.udem.listacircular;
 
-import co.edu.udem.listacircular.exceptions.ListaVaciaException;
 import co.edu.udem.listacircular.exceptions.NodoNoExisteException;
 
 public class ListaCircular {
@@ -57,12 +56,12 @@ public class ListaCircular {
 			else if (anterior == cabeza && cabeza.getSiguiente() == cabeza) {
 				cabeza = null;
 			}
-			// Eliminar el nodo apuntado por la lista, y que no es el único nodo
+			// Eliminar el nodo apuntado por la lista y que no es el único nodo
 			else if (anterior.getSiguiente() == cabeza && cabeza != anterior) {
 				anterior.setSiguiente(cabeza.getSiguiente());
 				cabeza = anterior;
 			}
-			// Eliminar un nodo cualquiera, que no es el apuntado por lista
+			// Eliminar un nodo cualquiera que no es el apuntado por lista
 			else {
 				anterior.setSiguiente(anterior.getSiguiente().getSiguiente());
 			}

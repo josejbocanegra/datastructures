@@ -10,18 +10,16 @@ public class Main {
 		listaCircular.insertar(new Nodo(550));
 		listaCircular.insertar(new Nodo(750));
 		
+		System.out.println("Lista inicial");
 		listaCircular.mostrarLista();
 	
 		
-		System.out.println("despues de borrar");
+		System.out.println("Después de borrar 50");
 		try {
 			listaCircular.borrar(50);
-			listaCircular.borrar(60);
 		} catch (NodoNoExisteException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		listaCircular.mostrarLista();
-		
 	}
 }
