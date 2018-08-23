@@ -9,7 +9,6 @@ public class Cola {
 		
 		if(isEmpty()){
 			primero = n;
-			ultimo = n;
 		}
 		else {
 			ultimo.setSiguiente(n);
@@ -17,17 +16,28 @@ public class Cola {
 		ultimo = n;
 	}
 	
-	public Nodo peek(){
-		return primero;
+	public Nodo peek() throws ColaVaciaException{
+		if(!isEmpty())
+			return primero;
+		else
+			throw new ColaVaciaException();
 	}
 	
-	public Nodo dequeue(){
-		Nodo actual = primero;
-		primero = primero.getSiguiente();
-		return actual;
+	public Nodo dequeue() throws ColaVaciaException{
+		if(!isEmpty()) {
+			Nodo actual = primero;
+			primero = primero.getSiguiente();
+			if(primero == null) {
+				ultimo = primero;
+			}
+			return actual;
+		}
+		else {
+			throw new ColaVaciaException();
+		}
 	}
 	
 	public boolean isEmpty(){
-		return ultimo !=null ? false : true;
+		return primero !=null ? false : true;
 	}
 }

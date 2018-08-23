@@ -2,29 +2,36 @@ package co.edu.udem.pila;
 
 public class Pila {
 	Nodo primero;
-	
-	public void push (Nodo n){
-		
-		if(isEmpty()){
+
+	public void push(Nodo n) {
+
+		if (isEmpty()) {
 			n.setSiguiente(null);
-		}
-		else {
+		} else {
 			n.setSiguiente(primero);
 		}
-		primero=n;
+		primero = n;
 	}
-	
-	public Nodo peek(){
-		return primero;
+
+	public Nodo peek() throws ListaVaciaException {
+		if(!isEmpty())
+			return primero;
+		else
+			throw new ListaVaciaException();
 	}
-	
-	public Nodo pop(){
-		Nodo actual = primero;
-		primero = primero.getSiguiente();
-		return actual;
+
+	public Nodo pop() throws ListaVaciaException {
+		if (!isEmpty()) {
+			Nodo actual = primero;
+			primero = primero.getSiguiente();
+			return actual;
+		}
+		else {
+			throw new ListaVaciaException();
+		}
 	}
-	
-	public boolean isEmpty(){
-		return primero !=null ? false : true;
+
+	public boolean isEmpty() {
+		return primero != null ? false : true;
 	}
 }

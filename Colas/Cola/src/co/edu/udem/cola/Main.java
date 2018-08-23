@@ -2,7 +2,7 @@ package co.edu.udem.cola;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ColaVaciaException {
 		// TODO Auto-generated method stub
 		Cola cola = new Cola();
 		
@@ -10,6 +10,12 @@ public class Main {
 		cola.queue(new Nodo(30));
 		cola.queue(new Nodo(40));
 		
+		System.out.println(cola.peek().getContenido());
+		
+		cola.dequeue();
+		System.out.println(cola.peek().getContenido());
+		
+		cola.dequeue();
 		System.out.println(cola.peek().getContenido());
 		
 		cola.dequeue();
