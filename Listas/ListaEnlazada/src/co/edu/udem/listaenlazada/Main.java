@@ -2,21 +2,21 @@ package co.edu.udem.listaenlazada;
 
 public class Main {
 
-	public static void main(String[] args) throws NoExisteException {
+	public static void main(String[] args) throws NoExisteException, NodoExisteException {
 		
 		//Crear una nueva lista enlazada. 
 		Lista listaA = new Lista();
-		listaA.insertarAlComienzo(new Nodo(40));
+		/*listaA.insertarAlComienzo(new Nodo(40));
 		listaA.insertarAlComienzo(new Nodo(30));
 		listaA.insertarAlComienzo(new Nodo(20));
-		listaA.insertarAlComienzo(new Nodo(10));
+		listaA.insertarAlComienzo(new Nodo(10));*/
 		
 		System.out.println("--Mostar los elementos de la lista--");
 		listaA.mostrarLista();
 		
-		listaA.insertarEnOrden(new Nodo (25));
+		listaA.insertarEnOrden(new Nodo (50));
 		
-		System.out.println("--Mostar los elementos de la lista--");
+		System.out.println("--Mostrar los elementos de la lista--");
 		listaA.mostrarLista();
 		
 		/*

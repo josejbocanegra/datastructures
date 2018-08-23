@@ -1,52 +1,39 @@
 package co.edu.udem.listaenlazada;
 
-import java.util.Vector;
-
 public class Lista {
 
 	Nodo primero;
 
-	// metodo creado en Lista para tomar los datos y compararlos
-
-	public void insertarEnOrden(Nodo nodo) throws NoExisteException {
-
-		Nodo actual = primero;
-
-		if (primero == null) {
-			primero = nodo;
-		} else {
-
-			if (buscarNodo(nodo.getContenido()) != null) {
-				System.out.println("El número " + nodo.getContenido() + " ya existe");
-			}
-
-			else {
-
-				while (actual != null) {
-
-					if (nodo.getContenido() > primero.getContenido()) {
-						insertarAlComienzo(nodo);
-						break;
-					}
-
-					if (localizarUltimo().getContenido() > nodo.getContenido()) {
-						insertarAlFinal(nodo);
-						break;
-					}
-
-					else {
-
-						if (nodo.getContenido() < actual.getContenido()) {
-							actual = actual.getSiguiente();
-						} else {
-							insertarAntesDe(actual.getContenido(), nodo);
+	public void insertarEnOrden(Nodo n) throws NoExisteException, NodoExisteException {
+		if (primero != null) {
+			if(buscarNodo(n.getContenido()) == null) {
+				if(n.getContenido() < primero.getContenido()) {
+					insertarAlComienzo(n);
+				}
+				else {
+					Nodo actual = primero;
+					Nodo siguiente = primero.getSiguiente();
+					while (siguiente != null) {
+						if(n.getContenido() > actual.getContenido() && n.getContenido() < siguiente.getContenido()) {
+							insertarDespuesDe(actual.getContenido(), n);
 							break;
 						}
-
+						else {
+							actual = siguiente;
+							siguiente = siguiente.getSiguiente();
+						}
 					}
-
+					if(siguiente == null) { 
+						insertarDespuesDe(actual.getContenido(), n);
+					}
 				}
 			}
+			else {
+				throw new NodoExisteException(n.getContenido());
+			}
+		}
+		else {
+			insertarAlComienzo(n);
 		}
 	}
 
@@ -171,7 +158,8 @@ public class Lista {
 
 	// TODO: Implementar los siguientes algoritmos
 	/*
-	 * Invertir la lista (imprimir en órden inverso) Ordenar la lista Mover un
-	 * elemento al comienzo de la lista Mover un elemento al final
+	 * Ordenar la lista 
+	 * Mover un elemento al comienzo de la lista 
+	 * Mover un elemento al final
 	 */
 }
