@@ -1,4 +1,4 @@
-package co.edu.udem.listaenlazada;
+package co.edu.udem.listaenlazada.exceptions;
 
 public class NoExisteException extends Exception {
 

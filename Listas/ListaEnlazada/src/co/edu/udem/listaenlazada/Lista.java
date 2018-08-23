@@ -1,5 +1,8 @@
 package co.edu.udem.listaenlazada;
 
+import co.edu.udem.listaenlazada.exceptions.NoExisteException;
+import co.edu.udem.listaenlazada.exceptions.NodoExisteException;
+
 public class Lista {
 
 	Nodo primero;
