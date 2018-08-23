@@ -5,6 +5,9 @@ public class Nodo {
 	int contenido;
 	Nodo siguiente;
 	
+	public Nodo () {
+		
+	}
 	public Nodo (int contenido) {
 		this.contenido=contenido;
 	}

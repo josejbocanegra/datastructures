@@ -5,18 +5,36 @@ public class Main {
 	public static void main(String[] args) throws NoExisteException {
 		
 		//Crear una nueva lista enlazada. 
-		Lista lista = new Lista();
+		Lista listaA = new Lista();
+		listaA.insertarAlComienzo(new Nodo(40));
+		listaA.insertarAlComienzo(new Nodo(30));
+		listaA.insertarAlComienzo(new Nodo(20));
+		listaA.insertarAlComienzo(new Nodo(10));
 		
-		//Insertar varios nodos al comienzo de la lista
-		System.out.println("--Insertar al comienzo--");
-		lista.insertarAlComienzo(new Nodo(15));
-		lista.insertarAlComienzo(new Nodo(20));
-		//lista.insertarAlComienzo(new Nodo(30));
-		//lista.insertarAlComienzo(new Nodo(40));
+		System.out.println("--Mostar los elementos de la lista--");
+		listaA.mostrarLista();
+		
+		listaA.insertarEnOrden(new Nodo (25));
+		
+		System.out.println("--Mostar los elementos de la lista--");
+		listaA.mostrarLista();
+		
+		/*
+		Lista listaB = new Lista();
+		listaB.insertarAlComienzo(new Nodo(40));
+		listaB.insertarAlComienzo(new Nodo(30));
+		listaB.insertarAlComienzo(new Nodo(20));
+		listaB.insertarAlComienzo(new Nodo(10));
+		
+		Lista listaC = new Lista();
+		listaC = listaC.intersectar(listaA, listaB);
 		
 		//Mostrar los elementos de la lista
 		System.out.println("--Mostar los elementos de la lista--");
-		lista.mostrarLista();
+		listaC.mostrarLista();
+		*/
+		
+		
 		
 		/*
 		//Buscar un nodo 
@@ -66,10 +84,13 @@ public class Main {
 		
 		lista.mostrarLista();
 		System.out.println("-------------");
-		*/
+
 		System.out.println("--Invertir lista--");
 		lista.invertirLista();
 		lista.mostrarLista();
 		System.out.println("-------------");
+		algo();*/
 	}
+	
+
 }
