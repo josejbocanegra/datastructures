@@ -18,7 +18,7 @@ public class Cola {
 	
 	public Nodo peek() throws ColaVaciaException{
 		if(!isEmpty())
-			return primero;
+			return primero; 
 		else
 			throw new ColaVaciaException();
 	}
