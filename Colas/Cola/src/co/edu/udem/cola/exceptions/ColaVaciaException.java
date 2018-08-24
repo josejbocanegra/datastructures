@@ -1,4 +1,4 @@
-package co.edu.udem.cola;
+package co.edu.udem.cola.exceptions;
 
 public class ColaVaciaException extends Exception {
 	/**

@@ -1,5 +1,7 @@
 package co.edu.udem.cola;
 
+import co.edu.udem.cola.exceptions.ColaVaciaException;
+
 public class Cola {
 	
 	Nodo primero;
