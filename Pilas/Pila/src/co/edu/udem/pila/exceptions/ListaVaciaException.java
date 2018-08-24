@@ -1,4 +1,4 @@
-package co.edu.udem.pila;
+package co.edu.udem.pila.exceptions;
 
 public class ListaVaciaException extends Exception {
 	/**

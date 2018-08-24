@@ -1,5 +1,7 @@
 package co.edu.udem.pila;
 
+import co.edu.udem.pila.exceptions.ListaVaciaException;
+
 public class Main {
 
 	public static void main(String[] args) throws ListaVaciaException {

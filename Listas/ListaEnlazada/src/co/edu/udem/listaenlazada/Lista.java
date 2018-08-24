@@ -138,7 +138,6 @@ public class Lista {
 	}
 
 	public void invertirLista() {
-
 		Nodo cabeza = primero;
 		int i = longitud() - 1;
 		while (i > 0) {
@@ -157,12 +156,6 @@ public class Lista {
 			anteriorCola.setSiguiente(null);
 			i--;
 		}
+		
 	}
-
-	// TODO: Implementar los siguientes algoritmos
-	/*
-	 * Ordenar la lista 
-	 * Mover un elemento al comienzo de la lista 
-	 * Mover un elemento al final
-	 */
 }
