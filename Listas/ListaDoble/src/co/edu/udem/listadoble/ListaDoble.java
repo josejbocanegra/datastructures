@@ -1,5 +1,7 @@
 package co.edu.udem.listadoble;
 
+import co.edu.udem.listadoble.exceptions.NoExisteException;
+
 public class ListaDoble {
 
 	Nodo primero;
@@ -153,14 +155,4 @@ public class ListaDoble {
 			actual=actual.siguiente;
 		}
 	}
-
-	// TODO: Implementar los siguientes algoritmos
-	/*
-	 * Insertar un elemento al final
-	 * Mostrar la lista en orden inverso 
-	 * Ordenar la lista 
-	 * Mover un elemento al comienzo
-	 * Mover un elemento al final 
-	 * Eliminar un elemento
-	 */
 }

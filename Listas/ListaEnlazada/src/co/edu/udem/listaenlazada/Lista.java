@@ -7,35 +7,62 @@ public class Lista {
 
 	Nodo primero;
 
+	public Lista intersectar(Lista a, Lista b) {
+		Nodo x = a.primero;
+
+		Nodo y = b.primero;
+		Lista c = new Lista();
+		while (x != null && y != null) {
+			if (x.getSiguiente() == null) {
+				if (x.getContenido() == y.getContenido()) {
+					c.insertarAlComienzo(new Nodo(y.getContenido()));
+					x = a.primero;
+					y = y.getSiguiente();
+				} else if (x.getSiguiente() == null) {
+					x = a.primero;
+
+					y = y.getSiguiente();
+				}
+			} else if (x.getContenido() == y.getContenido()) {
+				c.insertarAlComienzo(new Nodo(y.getContenido()));
+				x = x.getSiguiente();
+
+			} else {
+				x = x.getSiguiente();
+
+			}
+
+		}
+
+		return c;
+
+	}
+
 	public void insertarEnOrden(Nodo n) throws NoExisteException, NodoExisteException {
 		if (primero != null) {
-			if(buscarNodo(n.getContenido()) == null) {
-				if(n.getContenido() < primero.getContenido()) {
+			if (buscarNodo(n.getContenido()) == null) {
+				if (n.getContenido() < primero.getContenido()) {
 					insertarAlComienzo(n);
-				}
-				else {
+				} else {
 					Nodo actual = primero;
 					Nodo siguiente = primero.getSiguiente();
 					while (siguiente != null) {
-						if(n.getContenido() > actual.getContenido() && n.getContenido() < siguiente.getContenido()) {
+						if (n.getContenido() > actual.getContenido() && n.getContenido() < siguiente.getContenido()) {
 							insertarDespuesDe(actual.getContenido(), n);
 							break;
-						}
-						else {
+						} else {
 							actual = siguiente;
 							siguiente = siguiente.getSiguiente();
 						}
 					}
-					if(siguiente == null) { 
+					if (siguiente == null) {
 						insertarDespuesDe(actual.getContenido(), n);
 					}
 				}
-			}
-			else {
+			} else {
 				throw new NodoExisteException(n.getContenido());
 			}
-		}
-		else {
+		} else {
 			insertarAlComienzo(n);
 		}
 	}
@@ -156,6 +183,6 @@ public class Lista {
 			anteriorCola.setSiguiente(null);
 			i--;
 		}
-		
+
 	}
 }

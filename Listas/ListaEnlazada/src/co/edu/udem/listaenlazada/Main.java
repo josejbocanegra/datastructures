@@ -9,25 +9,21 @@ public class Main {
 		
 		//Crear una nueva lista enlazada. 
 		Lista listaA = new Lista();
-		/*listaA.insertarAlComienzo(new Nodo(40));
-		listaA.insertarAlComienzo(new Nodo(30));
-		listaA.insertarAlComienzo(new Nodo(20));
-		listaA.insertarAlComienzo(new Nodo(10));*/
+		listaA.insertarAlComienzo(new Nodo(400));
+		listaA.insertarAlComienzo(new Nodo(300));
+		listaA.insertarAlComienzo(new Nodo(200));
+		listaA.insertarAlComienzo(new Nodo(100));
 		
 		System.out.println("--Mostar los elementos de la lista--");
 		listaA.mostrarLista();
 		
-		listaA.insertarEnOrden(new Nodo (50));
-		
-		System.out.println("--Mostrar los elementos de la lista--");
-		listaA.mostrarLista();
-		
-		/*
+
+	
 		Lista listaB = new Lista();
-		listaB.insertarAlComienzo(new Nodo(40));
+		listaB.insertarAlComienzo(new Nodo(70));
 		listaB.insertarAlComienzo(new Nodo(30));
 		listaB.insertarAlComienzo(new Nodo(20));
-		listaB.insertarAlComienzo(new Nodo(10));
+		listaB.insertarAlComienzo(new Nodo(100));
 		
 		Lista listaC = new Lista();
 		listaC = listaC.intersectar(listaA, listaB);
@@ -35,7 +31,7 @@ public class Main {
 		//Mostrar los elementos de la lista
 		System.out.println("--Mostar los elementos de la lista--");
 		listaC.mostrarLista();
-		*/
+		
 		
 		
 		
