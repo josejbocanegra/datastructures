@@ -6,5 +6,4 @@ public class Recursividad {
 		
 		return f == 0 ? 1 : f * factorial (f -1);
 	}
-	
 }
