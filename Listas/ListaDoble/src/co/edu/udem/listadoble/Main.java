@@ -1,5 +1,7 @@
 package co.edu.udem.listadoble;
 
+import co.edu.udem.listadoble.exceptions.NoExisteException;
+
 public class Main {
 
 	public static void main(String[] args) throws NoExisteException {

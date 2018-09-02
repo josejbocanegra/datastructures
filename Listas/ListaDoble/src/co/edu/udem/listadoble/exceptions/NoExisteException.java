@@ -1,4 +1,4 @@
-package co.edu.udem.listadoble;
+package co.edu.udem.listadoble.exceptions;
 
 public class NoExisteException extends Exception {
 

@@ -25,16 +25,17 @@ public class ListaCircular {
 	public Nodo buscarAnterior(int contenido){
 
 		Nodo actual = cabeza;
-		//Que la lista esté vacía
-		if(actual == null) {
+		
+		//La lista está vacía
+		if(actual == null) { 
 			return actual;
 		}
-		//Que el anterior sea la cabeza de la lista - >retornar ése de una vez
-		else if (actual.getSiguiente().getContenido() == contenido) {
+		//El anterior es la cabeza de la lista -> retornar ése de una vez
+		else if (actual.getSiguiente().getContenido() == contenido) { 
 			return actual;
 		} 
-		//Que esté en otro lugar que no es la cabeza
-		else {
+		//Está en otro lugar que no es la cabeza
+		else { 
 			do {
 				actual = actual.getSiguiente();
 			} while (actual.getSiguiente().getContenido() != contenido && actual != cabeza);
