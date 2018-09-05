@@ -147,6 +147,13 @@ public class Lista {
 			actual = actual.getSiguiente();
 		}
 	}
+	
+	public void imprimir(Nodo n) {
+		if(n != null) {
+			System.out.println(n.getContenido());
+			imprimir(n.getSiguiente());
+		}
+	}
 
 	public void insertarAlFinal(Nodo n) {
 

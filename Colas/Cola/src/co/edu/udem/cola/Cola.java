@@ -19,13 +19,16 @@ public class Cola {
 	}
 	
 	public Nodo peek() throws ColaVaciaException{
+		
 		if(!isEmpty())
 			return primero; 
 		else
 			throw new ColaVaciaException();
+		
 	}
 	
 	public Nodo dequeue() throws ColaVaciaException{
+		
 		if(!isEmpty()) {
 			Nodo actual = primero;
 			primero = primero.getSiguiente();
@@ -37,9 +40,12 @@ public class Cola {
 		else {
 			throw new ColaVaciaException();
 		}
+		
 	}
 	
 	public boolean isEmpty(){
+		
 		return primero !=null ? false : true;
+		
 	}
 }

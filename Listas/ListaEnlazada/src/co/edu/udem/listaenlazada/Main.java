@@ -6,7 +6,11 @@ import co.edu.udem.listaenlazada.exceptions.NodoExisteException;
 public class Main {
 
 	public static void main(String[] args) throws NoExisteException, NodoExisteException {
-		
+		String cadena= "anita lava la tina";
+		cadena = cadena.replace(" ", "");
+		for (char s : cadena.toCharArray()) {
+			System.out.println(s);
+		}
 		//Crear una nueva lista enlazada. 
 		Lista listaA = new Lista();
 		listaA.insertarAlComienzo(new Nodo(400));
@@ -15,7 +19,8 @@ public class Main {
 		listaA.insertarAlComienzo(new Nodo(100));
 		
 		System.out.println("--Mostar los elementos de la lista--");
-		listaA.mostrarLista();
+		listaA.imprimir(listaA.primero);
+		//listaA.mostrarLista();
 		
 
 	
