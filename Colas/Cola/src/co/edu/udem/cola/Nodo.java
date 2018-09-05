@@ -2,14 +2,14 @@ package co.edu.udem.cola;
 
 public class Nodo {
 	
-	int contenido;
+	char contenido;
 	Nodo siguiente;
 	
-	public int getContenido() {
+	public char getContenido() {
 		return contenido;
 	}
 
-	public void setContenido(int contenido) {
+	public void setContenido(char contenido) {
 		this.contenido = contenido;
 	}
 
@@ -23,7 +23,7 @@ public class Nodo {
 
 	
 	
-	public Nodo(int contenido) {
+	public Nodo(char contenido) {
 		this.contenido = contenido;
 	}
 	
