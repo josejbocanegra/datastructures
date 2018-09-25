@@ -7,6 +7,14 @@ public class Lista {
 
 	Nodo primero;
 
+	public Nodo getPrimero() {
+		return primero;
+	}
+
+	public void setPrimero(Nodo primero) {
+		this.primero = primero;
+	}
+
 	public Lista intersectar(Lista a, Lista b) {
 		Nodo x = a.primero;
 
