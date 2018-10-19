@@ -11,34 +11,31 @@ public class Automata{
 	}
 	
 	public void q0() {
-		cont++;
 		aceptacion = false;
-		if(cont<word.length())
-			if(word.charAt(cont)=='a' || word.charAt(cont)=='b') {
+		cont++;
+		if(cont < word.length())
+			if(word.charAt(cont)=='a' || word.charAt(cont)=='b')
 				q1();
-			}
 	}
 	
 	public void q1() {
-		cont++;
 		aceptacion = false;
-		if(cont<word.length())
-			if(word.charAt(cont)=='a') {
+		cont++;
+		if(cont < word.length())
+			if(word.charAt(cont)=='a') 
 				q1();
-			} else {
+			else 
 				q2();
-			}
 	}
 	
 	public void q2() {
 		aceptacion = true;
 		cont++;
-		if(cont<word.length())
-			if(word.charAt(cont)=='a') {
+		if(cont < word.length())
+			if(word.charAt(cont)=='a')
 				q1();
-			} else {
+			else
 				q2();
-			}
 	}
 	
 	public void inicio() {
